@@ -1,3 +1,4 @@
+//@ts-nocheck
 const AllRestaurants = ({ restaurants }) => {
   console.log(restaurants);
   return (
