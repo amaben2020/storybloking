@@ -1,6 +1,9 @@
 import { getStoryblokApi } from '@storyblok/react/rsc';
 import StoryblokStory from '@storyblok/react/story';
 
+const isDev = process.env.NODE_ENV === 'development';
+export const revalidate = isDev ? 0 : 5;
+
 export default async function Page({ params }: { params: { slug: string[] } }) {
   let slug = params.slug ? params.slug.join('/') : 'home';
   console.log('slug', slug);

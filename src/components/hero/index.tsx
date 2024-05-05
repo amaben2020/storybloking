@@ -1,5 +1,6 @@
 import { storyblokEditable } from '@storyblok/react/rsc';
 const Hero = ({ blok }: any) => {
+  console.log(blok);
   return (
     <div
       {...storyblokEditable(blok)}
@@ -16,7 +17,9 @@ const Hero = ({ blok }: any) => {
     }`}
     >
       <div className="relative z-10 text-center">
-        <h1 className="text-6xl text-white font-bold mb-3">{blok.headline}</h1>
+        <h1 className="text-6xl text-white font-bold mb-3">
+          {blok?.headlineText}
+        </h1>
         <h2 className="text-4xl text-white font-light">{blok.subheadline}</h2>
       </div>
       <img
