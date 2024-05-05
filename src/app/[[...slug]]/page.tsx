@@ -12,8 +12,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
       resolve_relations: ['featured_restaurants.restaurants'],
     },
     {
-      cache:
-        process.env.NODE_ENV === 'development' ? 'no-store' : 'force-cache',
+      cache: process.env.NODE_ENV === 'development' ? 'no-store' : 'no-store',
     }
   );
 
