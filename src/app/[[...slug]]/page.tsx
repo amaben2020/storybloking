@@ -10,9 +10,8 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     {
       version: 'draft',
       resolve_relations: ['featured_restaurants.restaurants'],
-    },
-
-    { cache: 'no-store' }
+    }
+    // { cache: 'no-store' }
   );
 
   console.log(sb);
